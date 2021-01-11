@@ -14,7 +14,7 @@ public class SortTester {
 	{
 		int[] testingArray = new int[size];
 		for(int i = 0; i < size; i++){
-			int rand_num = (int)(Math.random() * n) - n;
+			int rand_num = (int)(Math.random() * (n+1)) - n;
 			testingArray[i] = rand_num;
 		} 
 		return testingArray;

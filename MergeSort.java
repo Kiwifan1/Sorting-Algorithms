@@ -27,7 +27,13 @@ public class MergeSort {
 	*   sort in place.
 	*/
 	private static void merge(int[] left, int[] right, int[] nums){
+		if(left.length + right.length == nums.length){
 
+		}
+		for(int i = 0; i < (left.length + right.length) / 2; i ++){
+			if(left[i] < right[i]){
+			}
+		}
 	}
 	
 	/*

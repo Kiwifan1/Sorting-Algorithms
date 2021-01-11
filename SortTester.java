@@ -1,7 +1,8 @@
 
 public class SortTester {
 	public static void main(String[] args) {
-		 
+		 int[] testingArray = randomArray(4, 3);
+		 MergeSort.sort(testingArray);
 	}
 	
 	/*
@@ -11,7 +12,12 @@ public class SortTester {
 	*/
 	public static int[] randomArray(int size, int n)
 	{
-		return null;
+		int[] testingArray = new int[size];
+		for(int i = 0; i < size; i++){
+			int rand_num = (int)(Math.random() * n) - n;
+			testingArray[i] = rand_num;
+		} 
+		return testingArray;
 	}
 
 }

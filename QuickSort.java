@@ -1,8 +1,10 @@
+import java.util.Arrays;
+
 public class QuickSort {
 	public static void sort(int[] nums){
+		
 	}
 		// use the private helper methods here. 
-	}
 	
 	/*
 	*
@@ -15,7 +17,10 @@ public class QuickSort {
 	private static void quickSort(int[] nums, int low, int high)
 	{
 		//base case
-		return;
+		if(nums.length <= 1){
+			return;
+		}
+		
 	
 		//partition nums
 		
@@ -34,14 +39,15 @@ public class QuickSort {
 	*/
 	private static int partition(int[] nums, int low, int high)
 	{
-		//choose pivot (last element)
+		int index = nums.length - 1;
+		int pivot = nums[index];
 	
 		//smaller than pivot on left, larger than pivot on right
 	
 		//place the pivot in correct spot
 	
 		//return index of pivot
-		return 0;
+		return index;
 	}
 }
 

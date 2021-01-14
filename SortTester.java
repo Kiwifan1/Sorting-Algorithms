@@ -4,7 +4,7 @@ import java.util.Arrays;
 public class SortTester {
 	public static void main(String[] args) {
 		 int[] testingArray = randomArray(11, 6);
-		 MergeSort.sort(testingArray);
+		 //MergeSort.sort(testingArray);
 		 System.out.println("Result: " + Arrays.toString(testingArray));
 	}
 	

@@ -10,14 +10,13 @@ public class MergeSort {
 		System.out.println("sorting " + Arrays.toString(nums));
 		int[] left = splitArray(nums, 0, nums.length / 2);
 		int[] right = splitArray(nums, nums.length / 2, nums.length);
-		if(left.length != 1){
+		if(left.length > 1){
 			sort(left);
 		}
-		if(right.length != 1){
+		if(right.length > 1){
 			sort(right);
 		}
 		merge(left, right, nums);
-		// merge left and right
 		System.out.println("merging " + Arrays.toString(left) +  " and " + Arrays.toString(right));
 	}
 	
@@ -27,12 +26,32 @@ public class MergeSort {
 	*   sort in place.
 	*/
 	private static void merge(int[] left, int[] right, int[] nums){
-		if(left.length + right.length == nums.length){
+		int i = 0;
+		int z = 0;
+		int count = 0;
+		while(i < left.length && z < right.length){
+			if(left[i] < right[z]){
+				nums[count] = left[i];
+				count++;
+				i++;
+			}
+			else{
+				nums[count] = right[z];
+				z++;
+				count++;
+			}
+		}
+		while(i < left.length){
+			nums[count] = left[i];
+			i++;
+			count++;
 
 		}
-		for(int i = 0; i < (left.length + right.length) / 2; i ++){
-			if(left[i] < right[i]){
-			}
+		while(z < right.length){
+			nums[count] = right[z];
+			z++;
+			count++;
+
 		}
 	}
 	

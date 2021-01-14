@@ -1,8 +1,11 @@
+import java.util.Arrays;
+
 
 public class SortTester {
 	public static void main(String[] args) {
-		 int[] testingArray = randomArray(4, 3);
+		 int[] testingArray = randomArray(4, 4);
 		 MergeSort.sort(testingArray);
+		 System.out.println("Result: " + Arrays.toString(testingArray));
 	}
 	
 	/*
@@ -14,7 +17,7 @@ public class SortTester {
 	{
 		int[] testingArray = new int[size];
 		for(int i = 0; i < size; i++){
-			int rand_num = (int)(Math.random() * (n+1)) - n;
+			int rand_num = (int)(Math.random() * (2*n+1)) - n;
 			testingArray[i] = rand_num;
 		} 
 		return testingArray;

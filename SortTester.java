@@ -3,8 +3,10 @@ import java.util.Arrays;
 
 public class SortTester {
 	public static void main(String[] args) {
-		 int[] testingArray = randomArray(11, 6);
+		 int[] testingArray = randomArray(5, 3);
 		 //MergeSort.sort(testingArray);
+		 System.out.println("Array: " + Arrays.toString((testingArray)));
+		 QuickSort.sort(testingArray);
 		 System.out.println("Result: " + Arrays.toString(testingArray));
 	}
 	
